@@ -1,9 +1,167 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Contact Page</title>
-</head>
-<body>
 
-</body>
+<style type="text/css"></style>
+<script type="text/javascript" src="validation.js"></script>
+
+
+<!-- THis should style and adjust the size of aspects of the page as the size changes  -->
+<head>
+		<link href="styles/style.css" rel="stylesheet">
+		<meta name="handheldfriendly" content="true">
+  		<meta name="mobileoptimized" content="240">
+  		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<meta charset="utf-8">
+		
+
+
+
+<head>
+	<title>Contact</title>
+</head>
+
+
+
+<!-- This page will the same formating wise as the home page. Only the content will change -->
+	<h1 align="center">B I R D I E  L A N D</h1>
+
+		<h1 align=font-size: 22px;"></h1>
+
+
+	<img src="Images/2.jpg" alt="Magestic scenery of Birdie Land"  width=100% height=500px title="The Cliffs." /> 
+
+	<body>
+		<!-- Attempt at a hamburger button, should only apply when size of page decreases -->
+			<!-- <a class="hamburger" href="#"> -->
+			<div id="container" class="container">
+			<nav>
+				<ul>
+					<!-- This my navigation -->
+					<li id="Home button">
+						<a href="birdieland.html">Home</a>
+						</li>
+						<li id="Contact button">
+							<a href="contact.html">Contact</a>
+						</li>
+						<li id="About">
+							<a href="about.html">About</a>
+						</li>
+					</ul>
+
+					<!-- This is the social media logos -->
+					<image src="Images/001-instagram.png" alt="Instagram logo">
+					<image src="Images/003-twitter.png" alt="Twitter Logo">
+				</nav>
+			</div>
+
+	
+
+
+<!-- THis is the TITLE of the page -->
+	<h2>Contact Us!</h2>
+	<!-- This will be where the text field bars go -->
+
+
+	<p>Your Name (required)</p>
+	<input type="text" name="username">
+
+	<p>Email (required)</p>
+	<input type="text" name="useremail">
+
+	
+
+
+
+	<!-- This will be the text area for users to write their comments and quesiton -->
+	<p>Talk to Us!</p>
+	<textarea name="textarea"
+   rows="10" cols="50">Comments or Questions?</textarea>
+
+
+
+
+<!-- RADIO BUTTONS!!! -->
+<!-- THis is the radio button with 3 options. Users can only select one option in which way they want to be contacted. Each option is named the same to ensure only one can be selected at a time and one will be deselected when another is chosen. -->
+<form>
+  <fieldset>
+    <legend>Please select your preferred contact method:</legend>
+    <div class="radiobtn">
+      <input type="radio" id="contactChoice1"
+       name="contact" value="email" checked>
+      <label for="contactChoice1">Email</label>
+
+      <input type="radio" id="contactChoice2"
+       name="contact" value="phone">
+      <label for="contactChoice2">Phone</label>
+
+      <input type="radio" id="contactChoice3"
+       name="contact" value="mail">
+      <label for="contactChoice3">Mail</label>
+  </fieldset>
+</form>
+
+
+
+
+
+
+
+<!-- THis is the CHECKBOX which will allow users to subcribe to our monthly travel blog -->
+<form>
+  <div>
+    <input type="checkbox" id="subscribeBlog" name="subscribe" value="subscribeBlog">
+    <label for="subscribeBlog">Subscribe to Travel Blog?</label>
+  </div>
+</form>
+
+<form>
+  <div>
+    <input type="checkbox" id="subscribeBlog" name="subscribe" value="subscribeBlog">
+    <label for="subscribeBlog">Subsribe to Monthly Email Alert?</label>
+  </div>
+</form>
+
+
+
+
+
+
+  <!-- Remember ****** to consider moving the submit button to the bottom of the form********** -->
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+
+
+
+
+
+<!-- This photo will be adjacent to the information and equal in size. These two components will make up the entirety of the page -->
+	<img src="Images/3.jpg" alt= "Adventurer feet hanging over the cliffs" align=right width=35% height=700px title="Boots"/> 
+	
+
+	</body>
+
+
+	<footer>		
+			<div itemscope itemtype="http://schema.org/PostalAddress" itemprop="address">
+					<span itemprop="streeAddress">1385 Woodroffe Ave.</span>
+					<span itemprop="addressLocality">Ottawa</span>
+					<span itemprop="addressRegion">Ontario</span>
+					<span itemprop="addressCountry">Canada</span>
+					<span itemprop="PostalCode">K2G 1V8</span>
+					<span itemprop="telephone">613-727-4723</span>
+				</div>
+				
+
+
+
+			<div>
+			<!-- &copy; is an HTML entity that will create copy symbol when rendered by thr Browser -->
+			<p>Copyright &copy; 2018 Celina Stillman</p>
+		</footer>
+	</div>
+	
 </html>
