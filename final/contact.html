@@ -135,6 +135,43 @@
 </form>
 
 
+<!-- VALIDATION FORM -->
+
+<form id="app" @submit="checkForm" action="/something" method="post" novalidate="true">
+  
+  <p v-if="errors.length">
+    <b>Please correct the following error(s):</b>
+    <ul>
+      <li v-for="error in errors">{{ error }}</li>
+    </ul>
+  </p>
+  
+  <p>
+    <label for="name">Name<label>
+    <input type="text" name="name" id="name" v-model="name">
+  </p>
+
+  <p>
+    <label for="email">Email<label>
+    <input type="email" name="email" id="email" v-model="email">
+  </p>
+
+  <p>
+    <label for="movie">Favorite Movie<label>
+    <select name="movie" id="movie" v-model="movie">
+      <option>Star Wars</option>
+      <option>Vanilla Sky</option>
+      <option>Atomic Blonde</option>
+    </select>
+  </p>
+
+  <p>
+    <input type="submit" value="Submit">  
+  </p>
+
+</form>
+
+
 
 
 
