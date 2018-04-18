@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
 
-<style type="text/css"></style>
-<script type="text/javascript" src="validation.js"></script>
 
+ 
 
 <!-- THis should style and adjust the size of aspects of the page as the size changes  -->
 <head>
+		<style type="text/css"></style>
+		<script type="text/javascript" src="validation.js"></script>
 		<link href="styles/style.css" rel="stylesheet">
 		<meta name="handheldfriendly" content="true">
   		<meta name="mobileoptimized" content="240">
   		<meta name="viewport" content="width=device-width,initial-scale=1">
 
 		<meta charset="utf-8">
-		
 
 
-
-<head>
-	<title>Contact</title>
+		<title>Contact</title>
 </head>
 
 
 
-<!-- This page will the same formating wise as the home page. Only the content will change -->
-	<h1 align="center">B I R D I E  L A N D</h1>
 
-		<h1 align=font-size: 22px;"></h1>
-
-
-	<img src="Images/2.jpg" alt="Magestic scenery of Birdie Land"  width=100% height=500px title="The Cliffs." /> 
 
 	<body>
+
+		<header id="header">
+	<!-- This page will the same formating wise as the home page. Only the content will change -->
+		<h1>B I R D I E  L A N D</h1>
+
+		
+
+
+		<img src="Images/2.jpg" alt="Magestic scenery of Birdie Land"  width=1450 height=500 title="The Cliffs.">
+	
+		</header>
 		<!-- Attempt at a hamburger button, should only apply when size of page decreases -->
 			<!-- <a class="hamburger" href="#"> -->
 			<div id="container" class="container">
 			<nav>
 				<ul>
 					<!-- This my navigation -->
-					<li id="Home button">
+					<li id="Homebutton">
 						<a href="birdieland.html">Home</a>
 						</li>
-						<li id="Contact button">
+						<li id="Contactbutton">
 							<a href="contact.html">Contact</a>
 						</li>
 						<li id="About">
@@ -50,8 +53,8 @@
 					</ul>
 
 					<!-- This is the social media logos -->
-					<image src="Images/001-instagram.png" alt="Instagram logo">
-					<image src="Images/003-twitter.png" alt="Twitter Logo">
+					<img src="Images/001-instagram.png" alt="Instagram logo">
+					<img src="Images/003-twitter.png" alt="Twitter Logo">
 				</nav>
 			</div>
 
@@ -98,6 +101,7 @@
       <input type="radio" id="contactChoice3"
        name="contact" value="mail">
       <label for="contactChoice3">Mail</label>
+  	</div>
   </fieldset>
 </form>
 
@@ -110,19 +114,16 @@
 <!-- THis is the CHECKBOX which will allow users to subcribe to our monthly travel blog -->
 <form>
   <div>
-    <input type="checkbox" id="subscribeBlog" name="subscribe" value="subscribeBlog">
-    <label for="subscribeBlog">Subscribe to Travel Blog?</label>
+    <input type="checkbox" id="subscribeblogt" name="subscribetravel" value="subscribeblogt">
+    <label for="subscribeblogt">Subscribe to Travel Blog?</label>
   </div>
 </form>
 
 <form>
   <div>
-    <input type="checkbox" id="subscribeBlog" name="subscribe" value="subscribeBlog">
-    <label for="subscribeBlog">Subsribe to Monthly Email Alert?</label>
+    <input type="checkbox" id="subscribeblogm" name="subscribemonthly" value="subscribeblogm">
+    <label for="subscribeblogm">Subsribe to Monthly Email Alert?</label>
   </div>
-</form>
-
-
 
 
 
@@ -139,29 +140,26 @@
 
 
 <!-- This photo will be adjacent to the information and equal in size. These two components will make up the entirety of the page -->
-	<img src="Images/3.jpg" alt= "Adventurer feet hanging over the cliffs" align=right width=35% height=700px title="Boots"/> 
+	<img src="Images/3.jpg" alt= "Adventurer feet hanging over the cliffs" id="boots" width=420 height=700 title="Boots">
 	
-
-	</body>
 
 
 	<footer>		
-			<div itemscope itemtype="http://schema.org/PostalAddress" itemprop="address">
-					<span itemprop="streeAddress">1385 Woodroffe Ave.</span>
-					<span itemprop="addressLocality">Ottawa</span>
-					<span itemprop="addressRegion">Ontario</span>
-					<span itemprop="addressCountry">Canada</span>
-					<span itemprop="PostalCode">K2G 1V8</span>
-					<span itemprop="telephone">613-727-4723</span>
-				</div>
-				
-
-
-
-			<div>
+					<p>1385 Woodroffe Ave.
+					Ottawa
+					Ontario
+					Canada
+					K2G 1V8
+					613-727-4723</p>
+			
 			<!-- &copy; is an HTML entity that will create copy symbol when rendered by thr Browser -->
 			<p>Copyright &copy; 2018 Celina Stillman</p>
-		</footer>
-	</div>
+			</footer>
+
+			
+	</body>
+
+
+	
 	
 </html>

@@ -163,6 +163,7 @@ h1 {
 		padding: 10px;
 		background-color: black;
 		color: white; 
+    text-align: center;
 	}
 
 
@@ -238,7 +239,10 @@ li {
     list-style-type: upper-roman;
   }
 
-
+.header{
+  font-size: 22px;
+  text-align: center;
+}
 *********************************************/*CONTACT PAGE*/*****************************************************
 /*Everything in this SECTION OF THE document will style the contact page*/
 
@@ -323,6 +327,11 @@ li {
   		color: black;
   		outline: 1px solid black;
 	}
+  .boots{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 		
 

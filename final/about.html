@@ -1,14 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <!--html in Canadian English -->
-<htmllang="en-can">
-<style type="text/css"></style>
 
 
-<head>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+
 
 	<head>
+		<style type="text/css"></style>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="styles/style.css" rel="stylesheet">
 		<meta name="handheldfriendly" content="true">
   		<meta name="mobileoptimized" content="240">
@@ -18,26 +18,28 @@
 		<style type="text/css"></style>
 		<script type="text/javascript" src="script.js"></script>
 
-
+		<title>about</title>
+	</head>
+	
+	<body>
 	<!-- /*the picture will be above the title  */ -->
-		<h1 align="center">B I R D I E  L A N D</h1>
+		<h1>B I R D I E  L A N D</h1>
 
-		<h1 align=font-size: 22px;"></h1>
 
-		<img src="Images/2.jpg" alt="Magestic scenery of Birdie Land"  width=100% height=500px title="The Cliffs." /> 
-</head>
+		<img src="Images/2.jpg" alt="Magestic scenery of Birdie Land"  width=1450 height=500 title="The Cliffs."> 
+		
 		
 
 
 
-		<body>
+		
 			<div id="container" class="container">
 			<nav>
 				<ul>
-					<li id="Home button">
+					<li id="Homebutton">
 						<a href="birdieland.html">Home</a>
 						</li>
-						<li id="Contact button">
+						<li id="Contactbutton">
 							<a href="contact.html">Contact</a>
 						</li>
 						<li id="About">
@@ -46,8 +48,8 @@
 					</ul>
 
 					<!-- This is the social media logos -->
-					<image src="Images/001-instagram.png" alt="Instagram logo">
-					<image src="Images/003-twitter.png" alt="Twitter Logo">
+					<img src="Images/001-instagram.png" alt="Instagram logo">
+					<img src="Images/003-twitter.png" alt="Twitter logo">
 				</nav>
 			</div>
 
@@ -60,9 +62,9 @@
 	Aliquam pretium felis et purus maximus eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque tristique finibus dui in dapibus. Nulla scelerisque justo at vulputate bibendum. Phasellus vel porta felis. Suspendisse enim leo, luctus et orci nec, varius tincidunt purus. Sed libero lectus, consequat non augue vitae, malesuada pulvinar turpis. In condimentum orci et orci volutpat tristique. Nam vitae luctus justo. Phasellus viverra pellentesque molestie. Vestibulum odio mi, hendrerit at eleifend sit amet, rutrum ac justo.</div>
 
 
-	/*<div class="slidecontainer">
+	<div class="slidecontainer">
   <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-	</div>*/
+	</div>
 
 
 
@@ -74,8 +76,7 @@
 <!-- <img class="mySlides w3-animate-top" src="images/6.jpg" width=50% height=700px title="slideshow." />  -->
 
 
-<!-- <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button> -->
-<!-- <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button> -->
+
 
 
 
@@ -87,19 +88,19 @@
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img src="images/1.jpg" style="width:100%">
+    <img src="images/1.jpg" alt="camp" width="100">
     <div class="text">Castle</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="images/2.jpg" style="width:100%">
+    <img src="images/2.jpg" alt="castle" width="100">
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="images/3.jpg" style="width:100%">
+    <img src="images/3.jpg" alt="house" width="100">
     <div class="text">Caption Three</div>
   </div>
 
@@ -109,34 +110,65 @@
 </div>
 <br>
 
-<!-- The dots/circles -->
+<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+<script type="text/javascript">
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("fade");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+
+}
+//The dots/circles
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
-
-
-</body>
-
-		<footer>		
-			<div itemscope itemtype="http://schema.org/PostalAddress" itemprop="address">
-					<span itemprop="streeAddress">1385 Woodroffe Ave.</span>
-					<span itemprop="addressLocality">Ottawa</span>
-					<span itemprop="addressRegion">Ontario</span>
-					<span itemprop="addressCountry">Canada</span>
-					<span itemprop="PostalCode">K2G 1V8</span>
-					<span itemprop="telephone">613-727-4723</span>
-				</div>
-				
+</script>
 
 
 
-			<div>
+			<footer>		
+					<p>1385 Woodroffe Ave.
+					Ottawa
+					Ontario
+					Canada
+					K2G 1V8
+					613-727-4723</p>
+			
 			<!-- &copy; is an HTML entity that will create copy symbol when rendered by thr Browser -->
 			<p>Copyright &copy; 2018 Celina Stillman</p>
-		</footer>
-	</div>
+			</footer>
+</body>
+
+		
+
+
+
 	
 
 
