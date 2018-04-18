@@ -26,7 +26,7 @@
 		<h1>B I R D I E  L A N D</h1>
 
 
-		<img src="Images/2.jpg" alt="Magestic scenery of Birdie Land"  width=1450 height=500 title="The Cliffs."> 
+		<img src="images/2.jpg" alt="Magestic scenery of Birdie Land"  width=1450 height=500 title="The Cliffs."> 
 		
 		
 
@@ -36,20 +36,20 @@
 			<div id="container" class="container">
 			<nav>
 				<ul>
-					<li id="Homebutton">
+					<li id="homebutton">
 						<a href="birdieland.html">Home</a>
 						</li>
-						<li id="Contactbutton">
+						<li id="contactbutton">
 							<a href="contact.html">Contact</a>
 						</li>
-						<li id="About">
+						<li id="about">
 							<a href="about.html">About</a>
 						</li>
 					</ul>
 
 					<!-- This is the social media logos -->
-					<img src="Images/001-instagram.png" alt="Instagram logo">
-					<img src="Images/003-twitter.png" alt="Twitter logo">
+					<img src="images/001-instagram.png" alt="instagram logo">
+					<img src="images/003-twitter.png" alt="twitter logo">
 				</nav>
 			</div>
 
@@ -112,43 +112,7 @@
 
 <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
 <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-<script type="text/javascript">
-var slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("fade");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-
-}
-//The dots/circles
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-</script>
 
 
 
