@@ -15,20 +15,72 @@
 
 		<meta charset="utf-8">
 
-
 		<title>Contact</title>
-</head>
 
+		<!-- THIS IS THE LOADER FOR THE CONTACT PAGE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		/* Center the loader */
+		#loader {
+		  position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  z-index: 1;
+		  width: 150px;
+		  height: 150px;
+		  margin: -75px 0 0 -75px;
+		  border: 16px solid #f3f3f3;
+		  border-radius: 50%;
+		  border-top: 16px solid #5adddd;
+		  border-bottom: 16px solid #0c0c0c;
+		  width: 120px;
+		  height: 120px;
+		  -webkit-animation: spin 2s linear infinite;
+		  animation: spin 2s linear infinite;
+		}
 
-	<!-- THIS IS FOR THE LOADER, A SPINNING WHEEL AS WE WAIT FOR EACH PAGE TO LOAD -->
-	<div class="loader"></div>
+		@-webkit-keyframes spin {
+		  0% { -webkit-transform: rotate(0deg); }
+		  100% { -webkit-transform: rotate(360deg); }
+		}
 
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
 
+		/* Add animation to "page content" */
+		.animate-bottom {
+		  position: relative;
+		  -webkit-animation-name: animatebottom;
+		  -webkit-animation-duration: 1s;
+		  animation-name: animatebottom;
+		  animation-duration: 1s
+		}
 
-	<body>
+		@-webkit-keyframes animatebottom {
+		  from { bottom:-100px; opacity:0 } 
+		  to { bottom:0px; opacity:1 }
+		}
 
-		<header id="header">
-	<!-- This page will the same formating wise as the home page. Only the content will change -->
+		@keyframes animatebottom { 
+		  from{ bottom:-100px; opacity:0 } 
+		  to{ bottom:0; opacity:1 }
+		}
+
+		#myDiv {
+		  display: none;
+		  text-align: center;
+		}
+		</style>
+	</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+<!-- This page will the same formating wise as the home page. Only the content will change -->
 		<h1>B I R D I E  L A N D</h1>
 
 		
@@ -36,7 +88,6 @@
 
 		<img src="images/2.jpg" alt="magestic scenery of birdie land"  width=1450 height=500 title="The Cliffs.">
 	
-		</header>
 		<!-- Attempt at a hamburger button, should only apply when size of page decreases -->
 			<!-- <a class="hamburger" href="#"> -->
 			<div id="container" class="container">
@@ -178,11 +229,13 @@
 
 
 
-<!-- This photo will be adjacent to the information and equal in size. These two components will make up the entirety of the page -->
-	<img src="images/3.jpg" alt= "Adventurer feet hanging over the cliffs" id="boots" width=420 height=700 title="Boots">
+<!-- This photo will be adjacent to the information and equal in size. These two components will make up the entirety of the page --><img src="images/3.jpg" alt= "Adventurer feet hanging over the cliffs" id="boots" width=420 height=700 title="Boots">
 	
 
 
+	
+
+<!-- THIS IS THE FOOTER WHICH WILL APPEAR AT THE BOTTOM OF THE PAGE -->
 	<footer>		
 					<p>1385 Woodroffe Ave.
 					Ottawa
@@ -196,7 +249,21 @@
 			</footer>
 
 
-	</body>
+
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 
 
 	

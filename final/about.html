@@ -14,20 +14,75 @@
   		<meta name="mobileoptimized" content="240">
   		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta charset="utf-8">
-		
+		<!-- LOADER -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style type="text/css"></style>
 		<script type="text/javascript" src="script.js"></script>
 
 		<title>about</title>
-	</head>
+		<!-- THIS IS THE LOADER FOR THE CONTACT PAGE -->
 	
+		<style>
+		/* Center the loader */
+		#loader {
+		  position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  z-index: 1;
+		  width: 150px;
+		  height: 150px;
+		  margin: -75px 0 0 -75px;
+		  border: 16px solid #f3f3f3;
+		  border-radius: 50%;
+		  border-top: 16px solid #5adddd;
+		  border-bottom: 16px solid #0c0c0c;
+		  width: 120px;
+		  height: 120px;
+		  -webkit-animation: spin 2s linear infinite;
+		  animation: spin 2s linear infinite;
+		}
 
+		@-webkit-keyframes spin {
+		  0% { -webkit-transform: rotate(0deg); }
+		  100% { -webkit-transform: rotate(360deg); }
+		}
 
-	<!-- THIS IS FOR THE LOADER, A SPINNING WHEEL AS WE WAIT FOR EACH PAGE TO LOAD -->
-	<div class="loader"></div>
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
 
-	<body>
-	<!-- /*the picture will be above the title  */ -->
+		/* Add animation to "page content" */
+		.animate-bottom {
+		  position: relative;
+		  -webkit-animation-name: animatebottom;
+		  -webkit-animation-duration: 1s;
+		  animation-name: animatebottom;
+		  animation-duration: 1s
+		}
+
+		@-webkit-keyframes animatebottom {
+		  from { bottom:-100px; opacity:0 } 
+		  to { bottom:0px; opacity:1 }
+		}
+
+		@keyframes animatebottom { 
+		  from{ bottom:-100px; opacity:0 } 
+		  to{ bottom:0; opacity:1 }
+		}
+
+		#myDiv {
+		  display: none;
+		  text-align: center;
+		}
+	</style>
+	</head>
+	<body onload="myFunction()" style="margin:0;">
+
+	<div id="loader"></div>
+
+	<div style="display:none;" id="myDiv" class="animate-bottom">
+	 <!-- /*the picture will be above the title  */ -->
 		<h1>B I R D I E  L A N D</h1>
 
 
@@ -132,31 +187,19 @@
 			<!-- &copy; is an HTML entity that will create copy symbol when rendered by thr Browser -->
 			<p>Copyright &copy; 2018 Celina Stillman</p>
 			</footer>
-</body>
 
-		
+<script>
+var myVar;
 
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
 
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
 

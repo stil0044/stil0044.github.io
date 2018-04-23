@@ -7,32 +7,74 @@
 		<meta name="handheldfriendly" content="true">
   		<meta name="mobileoptimized" content="240">
   		<meta name="viewport" content="width=device-width,initial-scale=1">
-
-		<meta charset="utf-8">
-
-	<!-- THIS IS FOR THE LOADER, A SPINNING WHEEL AS WE WAIT FOR EACH PAGE TO LOAD   https://www.w3schools.com/howto/howto_css_loader.asp -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<meta charset="utf-8">
 
 		<title>birdieland</title>
-		
-		<style type="text/css">
-		<script type="text/javascript" src="script.js"></script>
-		
 
-		</style>
+		
+<!-- THIS IS FOR THE LOADER, A SPINNING WHEEL AS WE WAIT FOR EACH PAGE TO LOAD   https://www.w3schools.com/howto/howto_css_loader.asp -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		/* Center the loader */
+		#loader {
+		  position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  z-index: 1;
+		  width: 150px;
+		  height: 150px;
+		  margin: -75px 0 0 -75px;
+		  border: 16px solid #f3f3f3;
+		  border-radius: 50%;
+		  border-top: 16px solid #5adddd;
+		  border-bottom: 16px solid #0c0c0c;
+		  width: 120px;
+		  height: 120px;
+		  -webkit-animation: spin 2s linear infinite;
+		  animation: spin 2s linear infinite;
+		}
+
+		@-webkit-keyframes spin {
+		0% { -webkit-transform: rotate(0deg); }
+		100% { -webkit-transform: rotate(360deg); }
+			}
+
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+
+		/* Add animation to "page content" */
+		.animate-bottom {
+		position: relative;
+		-webkit-animation-name: animatebottom;
+		-webkit-animation-duration: 1s;
+		animation-name: animatebottom;
+		animation-duration: 1s
+			}
+
+		@-webkit-keyframes animatebottom {
+		  from { bottom:-100px; opacity:0 } 
+		  to { bottom:0px; opacity:1 }
+		}
+
+		@keyframes animatebottom { 
+		  from{ bottom:-100px; opacity:0 } 
+		  to{ bottom:0; opacity:1 }
+		}
+
+		#myDiv {
+		  display: none;
+		  text-align: center;
+		}
+	</style>
 	</head>
 
+	<body onload="myFunction()" style="margin:0;">
 
+	<div id="loader"></div>
 
-
-
-	<!-- /*the picture will be underneath the title  */ -->
-	
-		
-
-
-
-		<body>
+	<div style="display:none;" id="myDiv" class="animate-bottom">
 
 			<header id="header">
 		<h1>B I R D I E  L A N D</h1>
@@ -42,6 +84,7 @@
 
 			<img src="images/2.jpg" alt="magestic scenery of birdie land"  width=1450 height=500 title="The Cliffs.">
 			</header>
+
 			<div id="container" class="container">
 			<nav>
 				<ul>
@@ -75,11 +118,7 @@
 
 
 
-
-<!-- <hr/> will create a horizontal rule which will create a clean divide between sections -->
-
-
-			<hr/>
+		
 			<h2>Travel Blog</h2><div id="left">
 			<div class="blog"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br/> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <br />nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <br />eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit <br/>anim id est laborum.</div></div>
 
@@ -128,23 +167,25 @@
 			
 
 
-		</body>
 
+	<script>
+	var myVar;
 
+	function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+	}
 
+	function showPage() {
+  	document.getElementById("loader").style.display = "none";
+  	document.getElementById("myDiv").style.display = "block";
+	}
+	</script>
 
-
-
-		
-
-
-
-
-
-
-
+	</html>
 
 		
 	
+	
 
-</html>
+
+		
