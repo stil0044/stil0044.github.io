@@ -27,15 +27,15 @@ This file would contain the Styles for all the pages*/
 	
 	
 
-	html{
+	
 
-		box-sizing: border-box;
-		-moz-text-size-adjust: 100%;
-  		-ms-text-size-adjust: 100%;
-  		-webkit-text-size-adjust: 100%;
-  		text-size-adjust: 100%;
-  	}
-
+html, body, {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
 
 	*, *::before, *::after {
   	box-sizing: inherit;}
@@ -167,8 +167,6 @@ This file would contain the Styles for all the pages*/
   display: none;
   text-align: center;
 }
-</style>
-</head>
 <body onload="myFunction()" style="margin:0;">
 
 <div id="loader"></div>
@@ -402,10 +400,7 @@ li {
   }
 
 
-/*VALIDATION https://vuejs.org/v2/cookbook/form-validation.html*/
-  input,select {
-  margin-left: 10px;
-}
+
 
 		
 

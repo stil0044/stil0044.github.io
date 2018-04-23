@@ -93,3 +93,8 @@ body {
 			background: pink;
 		}
 
+
+/*VALIDATION https://vuejs.org/v2/cookbook/form-validation.html*/
+  input,select {
+  margin-left: 10px;
+}

@@ -17,7 +17,7 @@
 
 		<title>Contact</title>
 
-		<!-- THIS IS THE LOADER FOR THE CONTACT PAGE -->
+<!-- THIS IS THE LOADER FOR THE CONTACT PAGE -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 		/* Center the loader */
@@ -72,6 +72,25 @@
 		  display: none;
 		  text-align: center;
 		}
+
+		/*CONTENT ALIGNMENT ????????????*/
+		#main {
+	    width: 70px;
+	    height: 300px;
+	    border: 1px solid #c3c3c3;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    -webkit-align-content: center;
+	    align-content: center;
+		}
+
+		#main div {
+	    width: 70px;
+	    height: 70px;
+		}
+
 		</style>
 	</head>
 
@@ -79,7 +98,9 @@
 
 <div id="loader"></div>
 
+
 <div style="display:none;" id="myDiv" class="animate-bottom">
+	<div id="wrapper"></div>
 <!-- This page will the same formating wise as the home page. Only the content will change -->
 		<h1>B I R D I E  L A N D</h1>
 
@@ -115,15 +136,19 @@
 
 
 <!-- THis is the TITLE of the page -->
-	<h2>Contact Us!</h2>
+	<h2>Contact us! We'd love to here from you!</h2>
 	<!-- This will be where the text field bars go -->
 
-
+	<p align="left">
 	<p>Your Name (required)</p>
 	<input type="text" name="username">
 
 	<p>Email (required)</p>
 	<input type="text" name="useremail">
+
+
+
+
 
 	
 
@@ -190,39 +215,7 @@
 
 <!-- VALIDATION FORM -->
 
-<form id="app" @submit="checkForm" action="/something" method="post" novalidate="true">
-  
-  <p v-if="errors.length">
-    <b>Please correct the following error(s):</b>
-    <ul>
-      <li v-for="error in errors">{{ error }}</li>
-    </ul>
-  </p>
-  
-  <p>
-    <label for="name">Name<label>
-    <input type="text" name="name" id="name" v-model="name">
-  </p>
 
-  <p>
-    <label for="email">Email<label>
-    <input type="email" name="email" id="email" v-model="email">
-  </p>
-
-  <p>
-    <label for="movie">Favorite Movie<label>
-    <select name="movie" id="movie" v-model="movie">
-      <option>Star Wars</option>
-      <option>Vanilla Sky</option>
-      <option>Atomic Blonde</option>
-    </select>
-  </p>
-
-  <p>
-    <input type="submit" value="Submit">  
-  </p>
-
-</form>
 
 
 

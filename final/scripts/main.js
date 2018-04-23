@@ -14,44 +14,15 @@ function myFunction() {
     }
 }
 
-/////////VALIDATION https://vuejs.org/v2/cookbook/form-validation.html//////////
-const app = new Vue({
-  el:'#app',
-  data:{
-    errors:[],
-    name:null,
-    email:null,
-    movie:null
-  },
-  methods:{
-    checkForm:function(e) {
-      this.errors = [];
-      if(!this.name) this.errors.push("Name required.");
-      if(!this.email) {
-        this.errors.push("Email required.");
-      } else if(!this.validEmail(this.email)) {
-        this.errors.push("Valid email required.");        
-      }
-      if(!this.errors.length) return true;
-      e.preventDefault();
-    },
-    validEmail:function(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+
+
+//////VALIDATOR///////
+function validateForm() {
+    var x = document.forms["username"]["useremail"].value;
+    if (x == "") {
+        alert("Name and email must be filled out");
+        return false;
     }
-  }
-})
-
-////////////LOADER JS/////////////// https://www.w3schools.com/howto/howto_css_loader.asp
-var myVar;
-
-function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
 }
 
 
