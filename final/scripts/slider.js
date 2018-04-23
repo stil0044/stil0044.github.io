@@ -1,18 +1,8 @@
 // The js for slider goes in this file
 
+//SLIDESHOW-////////////////////////////////https://codepen.io/JHicks/pen/szrKm
 
-
-////////////////////////////////////////////////////////////////////////////////////
-
-
-///AUTOMATIC SLIDESHOW//////NOT WORKING??????? IS IT LINKED??
-
-
-
-
-//SLIDESHOW---------https://www.w3schools.com/howto/howto_js_slideshow.asp///
-
-
+/*SLIDER FINAL*/
 $(document).ready(function(){
   //call the function when ready
   slideShow();
@@ -43,16 +33,3 @@ function slideShow(){
   
 }); //end ready
 
-
-
-
-
-
-/////FADESLIDE SHOW///////
-$('.fade').slick({
-  dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear'
-});

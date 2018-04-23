@@ -1,4 +1,4 @@
-This file would contain the Styles for all the pages*/
+/*This file would contain the Styles for all the pages*/
 
 *********************************************/*SHARED STYLES*/*******************************************
  
@@ -19,12 +19,7 @@ This file would contain the Styles for all the pages*/
 
 
 
-	/*@-moz-viewport { width: device-width; scale: 1; }*/
-	/*@-ms-viewport { width: device-width; scale: 1; }*/
-	/*@-o-viewport { width: device-width; scale: 1; }*/
-	/*@-webkit-viewport { width: device-width; scale: 1; }*/
-	/*@viewport { width: device-width; scale: 1; }*/
-	
+
 	
 
 	html, body, {
@@ -34,6 +29,7 @@ This file would contain the Styles for all the pages*/
     left:0;
     right:0;
 }
+
 
 
 	*, *::before, *::after {
@@ -64,7 +60,7 @@ This file would contain the Styles for all the pages*/
 		.nav li a:hover {
   			background-color: #444;
   			color: #fff;
-		/*}*/
+		/*}
 
   		
 	/*CSS reset*/
@@ -311,21 +307,39 @@ li {
 *********************************************/*CONTACT PAGE*/*****************************************************
 /*Everything in this SECTION OF THE document will style the contact page*/
 
-/*TEXT FIELDS in boxes*/
-.username{
-	width: 60%;
-	border: 1px;
-	outline: inherit;
-
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-.useremail{
-	width: 60%;
-	border: 1px;
-	outline-style: box; 
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
 
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
 /*This will style the checkbox for the travel blog*/
 .subscribeBlog {
 	color: black;
@@ -398,38 +412,7 @@ li {
     margin-right: auto;
   }
 
-
-
-
-		
-
-
-
-****************************************************/*ABOUT PAGE*/****************************************************
-.input-container {
-      max-width: 400px;
-      margin: 20px;
-      /*This is an easy alternative for clearfix*/
-      /*Should only be used if clearfix can not be added for some reason*/
-      overflow: hidden;
-    }
-
-    input[type=text], 
-    textarea,
-    input[type=email],
-    input[type=password],
-    select {
-
-      padding: 5px;
-      display: block;
-      float: left;
-      border: 1px solid gray;
-      width: 70%;
-      box-sizing: border-box;
-      transition: all 0.3s ease-out;
-    }
-
-    label.input-label {
+      label.input-label {
       float: left;
       width: 30%;
       box-sizing: border-box;
@@ -483,13 +466,47 @@ li {
 
 
 
+
+		
+
+
+
+****************************************************/*ABOUT PAGE*/****************************************************
+.input-container {
+      max-width: 400px;
+      margin: 20px;
+      /*This is an easy alternative for clearfix*/
+      /*Should only be used if clearfix can not be added for some reason*/
+      overflow: hidden;
+    }
+
+    input[type=text], 
+    textarea,
+    input[type=email],
+    input[type=password],
+    select {
+
+      padding: 5px;
+      display: block;
+      float: left;
+      border: 1px solid gray;
+      width: 70%;
+      box-sizing: border-box;
+      transition: all 0.3s ease-out;
+    }
+
+
+
+
+
 /*SLIDER FINAL*/
-body{
+body {
   background: #fefffc;
   color: black;
   text-align: center;
   font-family: Arial, sans-serif;
-  #slider{
+
+  #slider {
     background: #fefffc;
      width: 100%;
      margin: 0 auto;
@@ -503,8 +520,8 @@ body{
        &.show {
        display: inline;
      }
-     }
-   }
+    }
+
 
 
 

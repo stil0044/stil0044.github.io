@@ -84,6 +84,7 @@
 	    flex-wrap: wrap;
 	    -webkit-align-content: center;
 	    align-content: center;
+	    text-align: right;
 		}
 
 		#main div {
@@ -109,8 +110,7 @@
 
 		<img src="images/2.jpg" alt="magestic scenery of birdie land"  width=1450 height=500 title="The Cliffs.">
 	
-		<!-- Attempt at a hamburger button, should only apply when size of page decreases -->
-			<!-- <a class="hamburger" href="#"> -->
+		
 			<div id="container" class="container">
 			<nav>
 				<ul>
@@ -138,33 +138,28 @@
 <!-- THis is the TITLE of the page -->
 	<h2>Contact us! We'd love to here from you!</h2>
 	<!-- This will be where the text field bars go -->
-
-	<p align="left">
-	<p>Your Name (required)</p>
-	<input type="text" name="username">
-
-	<p>Email (required)</p>
-	<input type="text" name="useremail">
-
-
-
-
-
 	
+<div class="container">
+  <form action="action_page.php">
 
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-	<!-- This will be the text area for users to write their comments and quesiton -->
-	<p>Talk to Us!</p>
-	<textarea name="textarea"
-   rows="10" cols="50">Comments or Questions?</textarea>
-
-
-
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+  <!--This will be the text area for users to write their comments and quesiton-->
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
 <!-- RADIO BUTTONS!!! -->
-<!-- THis is the radio button with 3 options. Users can only select one option in which way they want to be contacted. Each option is named the same to ensure only one can be selected at a time and one will be deselected when another is chosen. -->
-<form>
+<!-- This is the radio button with 3 options. Users can only select one option in which way they want to be contacted. Each option is named the same to ensure only one can be selected at a time and one will be deselected when another is chosen. -->
   <fieldset>
     <legend>Please select your preferred contact method:</legend>
     <div class="radiobtn">
@@ -181,12 +176,6 @@
       <label for="contactChoice3">Mail</label>
   	</div>
   </fieldset>
-</form>
-
-
-
-
-
 
 
 <!-- THis is the CHECKBOX which will allow users to subcribe to our monthly travel blog -->
@@ -203,17 +192,34 @@
     <label for="subscribeblogm">Subsribe to Monthly Email Alert?</label>
   </div>
 
+  </form>
+</div>
 
 
 
-  <!-- Remember ****** to consider moving the submit button to the bottom of the form********** -->
+
+
+
+
+  <!-- SUBMIT Button -->
   <div>
-    <button type="submit">Submit</button>
+     <input type="submit" value="Submit">
   </div>
 </form>
 
 
 <!-- VALIDATION FORM -->
+
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+
 
 
 
@@ -244,7 +250,7 @@
 
 
 </div>
-
+<!-- Continuation code of loader -->
 <script>
 var myVar;
 
