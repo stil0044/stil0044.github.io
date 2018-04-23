@@ -42,7 +42,7 @@ const app = new Vue({
   }
 })
 
-////////////LOADER JS///////////////
+////////////LOADER JS/////////////// https://www.w3schools.com/howto/howto_css_loader.asp
 var myVar;
 
 function myFunction() {
