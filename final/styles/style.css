@@ -505,22 +505,44 @@ body {
   color: black;
   text-align: center;
   font-family: Arial, sans-serif;
+}
+  
+
+  .slide {
+    display:none;
+  }
 
   #slider {
     background: #fefffc;
-     width: 100%;
-     margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
    }
+
    #slider img {
-     display: none;
      border: 3px solid #000;
      border-radius: 20px;
      height: 250px;
      width: 250px;
-       &.show {
-       display: inline;
-     }
-    }
+     vertical-align: middle;
+  
+        }
+     
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+   @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
 
 
 

@@ -3,33 +3,28 @@
 //SLIDESHOW-////////////////////////////////https://codepen.io/JHicks/pen/szrKm
 
 /*SLIDER FINAL*/
-$(document).ready(function(){
+  //$(document).ready(function(){
   //call the function when ready
-  slideShow();
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+   
+    slides[slideIndex-1].style.display = "block";  
+    
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+   //end ready
+
+ //});
 
 
-//Actually define the slideShow()
-function slideShow(){
-  
-  //*** Conditional & Variables ***//
-  
-    //Define the current img
-    var current = $('#slider .show');
-    //If index != 0/false then show next img
-  var next = current.next().length ? 
-      current.next() :
-      // if index == false then show first img
-      current.siblings().first();
-  
-   //*** Swap out the imgs and class ***//
-   current.hide().removeClass('show');
-   next.fadeIn("slow").addClass('show');
-  
-  
-  //*** Repeat function every 3 seconds ***//
-  setTimeout(slideShow, 3000);
-  
-};
-  
-}); //end ready
 

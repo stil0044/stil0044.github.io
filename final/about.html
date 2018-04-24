@@ -130,14 +130,34 @@
 <!-- SLIDER FINAL -->
 <!-- Slideshow container -->
 <div id="slider">
-	<img class="show">
-  	<img src="images/5.jpg" alt="photo"  width=500 height=500 title="birdie">
-  	<img src="images/4.jpg" alt="photo"  width=500 height=500 title="scenery">
-  	<img src="images/1.jpg" alt="photo"  width=500 height=500 title="castle">
+  	<div class="slide fade"><img src="images/5.jpg" alt="photo"  width=500 height=500 title="birdie"></div>
+  	<div class="slide fade"><img src="images/4.jpg" alt="photo"  width=500 height=500 title="scenery"></div>
+  	<div class="slide fade"><img src="images/1.jpg" alt="photo"  width=500 height=500 title="castle"></div>
 </div>
 
+<script type="text/javascript" src="scripts/slider.js">
+	//showSlides();
+</script>
 
-		
+<!--<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+   
+    slides[slideIndex-1].style.display = "block";  
+    
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>-->
 
 
 
