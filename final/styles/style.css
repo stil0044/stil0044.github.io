@@ -340,6 +340,23 @@ input[type=submit]:hover {
     background-color: #f2f2f2;
     padding: 20px;
 }
+
+.cnt{
+  float: left;
+  text-align: left;
+  padding: 12px;
+ 
+
+}
+
+
+
+
+p {
+margin-left: 70px;
+font-weight: bold;
+}
+
 /*This will style the checkbox for the travel blog*/
 .subscribeBlog {
 	color: black;

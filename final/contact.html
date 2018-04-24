@@ -7,7 +7,7 @@
 <!-- THis should style and adjust the size of aspects of the page as the size changes  -->
 <head>
 		<style type="text/css"></style>
-		<script type="text/javascript" src="validation.js"></script>
+		<script type="text/javascript" src="/validation.js"></script>
 		<link href="styles/style.css" rel="stylesheet">
 		<meta name="handheldfriendly" content="true">
   		<meta name="mobileoptimized" content="240">
@@ -141,61 +141,53 @@
 	<h2>Contact us! We'd love to here from you!</h2>
 	<!-- This will be where the text field bars go -->
 	
-<div class="container">
-  <form action="action_page.php">
+<div class="cnt">
+	<form name='registration' onSubmit="return formValidation();">
+<ul>
+<li><label for="userid">User id:</label></li>
+<li><input type="text" name="userid" size="12" /></li>
+<li><label for="passid">Password:</label></li>
+<li><input type="password" name="passid" size="12" /></li>
+<li><label for="username">Name:</label></li>
+<li><input type="text" name="username" size="50" /></li>
+<li><label for="address">Address:</label></li>
+<li><input type="text" name="address" size="50" /></li>
+<li><label for="country">Country:</label></li>
+<li><select name="country">
+<option selected="" value="Default">(Please select a country)</option>
+<option value="AF">Australia</option>
+<option value="AL">Canada</option>
+<option value="DZ">India</option>
+<option value="AS">Russia</option>
+<option value="AD">USA</option>
+</select></li>
+<li><label for="zip">ZIP Code:</label></li>
+<li><input type="text" name="zip" /></li>
+<li><label for="email">Email:</label></li>
+<li><input type="text" name="email" size="50" /></li>
+<li><label id="gender">Sex:</label></li>
+<li><input type="radio" name="msex" value="Male" /><span>Male</span></li>
+<li><input type="radio" name="fsex" value="Female" /><span>Female</span></li>
+<li><label>Language:</label></li>
+<li><input type="checkbox" name="en" value="en" checked /><span>English</span></li>
+<li><input type="checkbox" name="nonen" value="noen" /><span>Non English</span></li>
+<li><label for="desc">About:</label></li>
+<li><textarea name="desc" id="desc"></textarea></li>
+<li><input type="submit" name="submit" value="Submit" /></li>
+</ul>
+</form>
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-  <!--This will be the text area for users to write their comments and quesiton-->
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+
+
 
 <!-- RADIO BUTTONS!!! -->
 <!-- This is the radio button with 3 options. Users can only select one option in which way they want to be contacted. Each option is named the same to ensure only one can be selected at a time and one will be deselected when another is chosen. -->
-  <fieldset>
-    <legend>Please select your preferred contact method:</legend>
-    <div class="radiobtn">
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
-      <label for="contactChoice1">Email</label>
-
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
-      <label for="contactChoice2">Phone</label>
-
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
-      <label for="contactChoice3">Mail</label>
-  	</div>
-  </fieldset>
-
+  
 
 <!-- THis is the CHECKBOX which will allow users to subcribe to our monthly travel blog -->
-<form>
-  <div>
-    <input type="checkbox" id="subscribeblogt" name="subscribetravel" value="subscribeblogt">
-    <label for="subscribeblogt">Subscribe to Travel Blog?</label>
-  </div>
-</form>
-
-<form>
-  <div>
-    <input type="checkbox" id="subscribeblogm" name="subscribemonthly" value="subscribeblogm">
-    <label for="subscribeblogm">Subsribe to Monthly Email Alert?</label>
-  </div>
-
-  </form>
-</div>
 
 
 
@@ -204,10 +196,7 @@
 
 
   <!-- SUBMIT Button -->
-  <div>
-     <input type="submit" value="Submit">
-  </div>
-</form>
+ 
 
 
 
