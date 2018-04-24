@@ -308,6 +308,10 @@ li {
     float: left;
 	}
 
+  .blog{
+    float: left;
+  }
+
  ol.c {
     list-style-type: upper-roman;
   }
@@ -550,6 +554,7 @@ font-weight: bold;
     input[type=password],
     select {
 
+ 
       padding: 5px;
       display: block;
       float: left;
