@@ -28,6 +28,7 @@
     bottom:0;
     left:0;
     right:0;
+    font-family: 'Anaheim';font-size: 22px;
 }
 
 
@@ -306,7 +307,6 @@ li {
     border: 3px solid gray;
     margin: 0; 
     float: left;
-    font-family: 'Sofia';font-size: 22px;
 	}
 
  ol.c {
