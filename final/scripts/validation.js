@@ -1,7 +1,7 @@
 // The JS required for Validation of Contact form would go in this file
 
 //////////////////////////VALIDATION FOR EMAIL ON CONTACT PAGE///
-$email = 'mail@example.com';
+$email = 'stil0044@algonquinlive.com';
 $validation = filter_var($email, FILTER_VALIDATE_EMAIL);
 
 if ( $validation ) $output = 'proper email address';
