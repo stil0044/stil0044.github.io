@@ -1,7 +1,6 @@
 // The JS required for Validation of Contact form would go in this file
 
 //////////////////////////VALIDATION FOR EMAIL ON CONTACT PAGE///
-$email = 'stil0044@algonquinlive.com';
 function formValidation()
 {
 var uid = document.registration.userid;
@@ -38,4 +37,17 @@ if(validsex(umsex,ufsex))
 }
 return false;
 }
-
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+}
