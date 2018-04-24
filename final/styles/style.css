@@ -347,11 +347,13 @@ input[type=submit]:hover {
   padding: 12px;
   margin-left: 70px;
 }
+.cnt
 form li {
 list-style: none;
 margin-bottom: 5px;
 }
 
+.cnt
 form ul li label{
 float: left;
 clear: left;
@@ -362,23 +364,27 @@ font-family:Arial, sans-serif;
 font-size:14px;
 }
 
+.cnt
 form ul li input, select, span {
 float: left;
 margin-bottom: 10px;
 }
 
+.cnt
 form textarea {
 float: left;
 width: 350px;
 height: 150px;
 }
 
+.cnt
 [type="submit"] {
 clear: left;
 margin: 20px 0 0 230px;
 font-size:18px
 }
 
+.cnt
 p {
 margin-left: 70px;
 font-weight: bold;
