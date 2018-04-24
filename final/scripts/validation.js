@@ -86,21 +86,21 @@ alert("You have entered an invalid email address!");
 uemail.focus();
 return false;
 }
-} function validsex(umsex,ufsex)
+} function validsex(usex,usex)
 {
 x=0;
 
-if(umsex.checked) 
+if(usex.checked) 
 {
 x++;
-} if(ufsex.checked)
+} if(usex.checked)
 {
 x++; 
 }
 if(x==0)
 {
 alert('Select Male/Female');
-umsex.focus();
+usex.focus();
 return false;
 }
 else
