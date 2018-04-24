@@ -10,7 +10,6 @@ var uzip = document.registration.zip;
 var uemail = document.registration.email;
 var umsex = document.registration.msex;
 var ufsex = document.registration.fsex;
-
 {
 if(allLetter(uname))
 {
