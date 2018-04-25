@@ -1,4 +1,4 @@
-// The JS required for Validation of Contact form would go in this file
+// JS required for Validation for Contact form is in this file
 
 //////////////////////////VALIDATION FOR EMAIL ON CONTACT PAGE///
 function formValidation()
@@ -10,7 +10,7 @@ var uzip = document.registration.zip;
 var uemail = document.registration.email;
 var umsex = document.registration.msex;
 var ufsex = document.registration.fsex;
-{
+
 if(allLetter(uname))
 {
 if(alphanumeric(uadd))
@@ -21,19 +21,20 @@ if(ValidateEmail(uemail))
 {
 if(validsex(umsex,ufsex))
 {
+	return false;
 }
 } 
 }
 } 
 }
+
 }
-}
-}
-return false;
-}
+
+
+
 function allLetter(uname)
 { 
-var letters = /^[A-Za-z]+$/;
+var letters = /^[A-Za-z\s-, ]+$/;
 if(uname.value.match(letters))
 {
 return true;
@@ -45,10 +46,11 @@ uname.focus();
 return false;
 }
 }
+
 function alphanumeric(uadd)
 { 
-var letters = /^[0-9a-zA-Z]+$/;
-if(uadd.value.match(letters))
+var alphaLetters = /^[0-9a-zA-Z\s-, ,.]+$/;
+if(uadd.value.match(alphaLetters))
 {
 return true;
 }
@@ -59,6 +61,7 @@ uadd.focus();
 return false;
 }
 }
+
 function countryselect(ucountry)
 {
 if(ucountry.value == "Default")
@@ -72,7 +75,8 @@ else
 return true;
 }
 }
-}
+
+
 function ValidateEmail(uemail)
 {
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -86,7 +90,9 @@ alert("You have entered an invalid email address!");
 uemail.focus();
 return false;
 }
-} function validsex(umsex,ufsex)
+} 
+
+function validsex(umsex,ufsex)
 {
 x=0;
 
@@ -105,9 +111,9 @@ return false;
 }
 else
 {
-alert('Form Succesfully Submitted');
-window.location.reload()
 return true;
 }
 }
+
+
 

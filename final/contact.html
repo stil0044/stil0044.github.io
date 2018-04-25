@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
  
 
 <!-- THis should style and adjust the size of aspects of the page as the size changes  -->
@@ -75,7 +74,7 @@
 		  text-align: center;
 		}
 
-		/*CONTENT ALIGNMENT ????????????*/
+		/*CONTENT ALIGNMENT*/
 		#main {
 	    width: 70px;
 	    height: 300px;
@@ -142,11 +141,12 @@
 	<!-- This will be where the text field bars go -->
 	
 <div class="cnt">
-	<form name='registration' onSubmit="return formValidation();">
+	<form name='registration' onSubmit="return formValidation()">
 <ul><li><label for="username">Name:</label></li>
 <li><input type="text" name="username" size="50" /></li>
 <li><label for="address">Address:</label></li>
 <li><input type="text" name="address" size="50" /></li>
+<!-- Drop down menu for interaction -->
 <li><label for="country">Country:</label></li>
 <li><select name="country">
 <option selected="" value="Default">(Please select a country)</option>
@@ -159,49 +159,22 @@
 <li><label for="email">Email:</label></li>
 <li><input type="text" name="email" size="50" /></li>
 <li><label id="gender">Sex:</label></li>
+<!-- RADIO BUTTONS!!! -->
+<!-- This is the radio button with 3 options. Users can only select one option in which way they want to be contacted. Each option is named the same to ensure only one can be selected at a time and one will be deselected when another is chosen. -->
 <li><input type="radio" name="sex" value="Male" /><span>Male</span></li>
 <li><input type="radio" name="sex" value="Female" /><span>Female</span></li>
 <li><label>Language:</label></li>
+<!-- THis is the CHECKBOX which will allow users to select preferred language -->
 <li><input type="checkbox" name="en" value="en" checked /><span>English</span></li>
 <li><input type="checkbox" name="nonen" value="noen" /><span>Non English</span></li>
 <li><label for="desc">About:</label></li>
 <li><textarea name="desc" id="desc"></textarea></li>
+  <!-- SUBMIT Button -->
 <li><input type="submit" name="submit" value="Submit" /></li>
 </ul>
 </form>
 
 </div>
-
-
-
-
-
-<!-- RADIO BUTTONS!!! -->
-<!-- This is the radio button with 3 options. Users can only select one option in which way they want to be contacted. Each option is named the same to ensure only one can be selected at a time and one will be deselected when another is chosen. -->
-  
-
-<!-- THis is the CHECKBOX which will allow users to subcribe to our monthly travel blog -->
-
-
-
-
-
-
-
-  <!-- SUBMIT Button -->
- 
-
-
-
-
-
-<!-- VALIDATION FORM -->
-
-
-
-
-
-
 
 
 
